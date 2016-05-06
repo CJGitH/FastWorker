@@ -17,17 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSLog(@"有些网络资源无法获取,无法做");
     
-    NSLog(@"chen");
-    
-    NSLog(@"测试");
-    
-        NSLog(@"测多少v试");
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
