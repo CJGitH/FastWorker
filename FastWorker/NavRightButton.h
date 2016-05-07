@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  NavRightButton.h
 //  FastWorker
 //
-//  Created by chen on 16/5/4.
+//  Created by chen on 16/5/6.
 //  Copyright © 2016年 chen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NavRightButton : UIButton
 
 @end
-
