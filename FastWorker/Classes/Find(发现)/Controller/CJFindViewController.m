@@ -7,9 +7,15 @@
 //
 
 #import "CJFindViewController.h"
-#import "AFNetworking.h"
-#import "UIImageView+WebCache.h"
 #import "UICollectionViewWaterfallLayout.h"
+
+//#import "AFNetworking.h"
+//#import "UIImageView+WebCache.h"
+
+
+#import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface CJFindViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateWaterfallLayout>
 
@@ -20,12 +26,14 @@
 static NSString * const reuseIdentifier = @"Cell";
 
 
-#define kItemWidth 100.0f
+//#define kItemWidth 100.0f
+//#define kColumnCount 3
+#define kItemWidth [UIScreen mainScreen].bounds.size.width / 2.0 - 2
 #define kColumnCount 2
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // NSArray *arr = @[@"dkldkl",@"cc",@"cdskclsdlck",@"1"];
     
     
@@ -44,14 +52,21 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.view addSubview:vc];
     
     
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://api2.hichao.com/stars?category=%E5%85%A8%E9%83%A8" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:@"http://api2.hichao.com/stars?category=%E5%85%A8%E9%83%A8" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self.resultDict = responseObject;
         [vc reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+//    [manager GET:@"http://api2.hichao.com/stars?category=%E5%85%A8%E9%83%A8" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        self.resultDict = responseObject;
+//        [vc reloadData];
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//    }];
 }
 #pragma mark - UICollectionViewDataSource,UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -91,5 +106,11 @@ static NSString * const reuseIdentifier = @"Cell";
     height = kItemWidth * height / width;
     return height;
     
+}
+
+//点击了cell时进行跳转播放视频
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSLog(@"点击了cell");
 }
 @end

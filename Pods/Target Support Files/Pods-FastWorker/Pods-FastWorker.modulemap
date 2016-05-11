@@ -1,0 +1,6 @@
+framework module Pods_FastWorker {
+  umbrella header "Pods-FastWorker-umbrella.h"
+
+  export *
+  module * { export * }
+}
