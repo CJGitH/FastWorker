@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "CJNavigationController.h"
 #import "CJViewController.h"
+
 
 
 
@@ -24,9 +24,8 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     CJViewController * vc =[[CJViewController alloc]init];
-    CJNavigationController * nav = [[CJNavigationController alloc]initWithRootViewController:vc];
     
-    self.window.rootViewController = nav;
+    self.window.rootViewController = vc;
     
     [self.window makeKeyAndVisible];
     

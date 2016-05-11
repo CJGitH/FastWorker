@@ -1,13 +1,13 @@
 //
-//  CJViewController.h
+//  CJTwoBtn.h
 //  FastWorker
 //
-//  Created by chen on 16/5/6.
+//  Created by chen on 16/5/9.
 //  Copyright © 2016年 chen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CJViewController : UIViewController
+@interface CJTwoBtn : UIButton
 
 @end

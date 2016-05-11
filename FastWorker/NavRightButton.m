@@ -15,7 +15,7 @@
     
     [super layoutSubviews];
     
-    self.frame = CGRectMake(30, self.frame.size.height * 0.5, 30, 30);
+    self.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 45, self.frame.size.height * 0.8, 30, 30);
     
 }
 

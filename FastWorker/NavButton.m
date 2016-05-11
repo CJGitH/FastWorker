@@ -13,7 +13,7 @@
 - (void)layoutSubviews {
 
     [super layoutSubviews];
-    self.frame = CGRectMake(0, self.frame.size.height * 0.5, 30, 30);
+    self.frame = CGRectMake(15, self.frame.size.height * 0.8, 30, 30);
     
 }
 
