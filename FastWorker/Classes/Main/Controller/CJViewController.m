@@ -16,6 +16,9 @@
 #import "CJFollowViewController.h"
 #import "CJSettingViewController.h"
 
+#import "CJCodeViewController.h"
+
+
 
 @interface CJViewController ()<UIScrollViewDelegate>
 /** 用来显示所有子控制器view的scrollView */
@@ -318,6 +321,12 @@
 //点击右侧按钮时调用
 - (void)rightBrnClick {
     
+    UIStoryboard * codeStoryB = [UIStoryboard storyboardWithName:@"CJCodeViewController" bundle:nil];
+    CJCodeViewController * codeVc = [codeStoryB instantiateInitialViewController];
+
+//    [self.navigationController pushViewController:codeVc animated:YES];
+    
+    [self presentViewController:codeVc animated:YES completion:nil];
     NSLog(@"点击了右侧按钮");
 }
 

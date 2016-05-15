@@ -16,6 +16,7 @@
 #import "CJsetBtn.h"
 #import "CJlocinBtn.h"
 
+#import "CJLocaViewController.h"
 
 
 #import "CJTableViewController.h"
@@ -140,7 +141,7 @@
     self.locinBtn = locinBtn;
     [locinBtn addTarget:self action:@selector(locinBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [locinBtn setImage:[UIImage imageNamed:@"edit_btn_sticker_selected"] forState:UIControlStateNormal];
-    [locinBtn setTitle:@"本业作品集" forState:UIControlStateNormal];
+    [locinBtn setTitle:@"本地作品集" forState:UIControlStateNormal];
     locinBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     locinBtn.frame = CGRectMake(anlbtnX, anlbtnY + (3 * anlbtnH), anlbtnW, anlbtnH);
 //    locinBtn.backgroundColor = [UIColor yellowColor];
@@ -215,5 +216,13 @@ button.backgroundColor = [UIColor colorWithRed:200.0 / 250 green:160.0 / 250 blu
     
 button.backgroundColor = [UIColor colorWithRed:200.0 / 250 green:160.0 / 250 blue:130.0 / 250 alpha:0.7];
     NSLog(@"本地作品集");
+    
+    
+    UIStoryboard * storyBoardL = [UIStoryboard storyboardWithName:@"CJLocaViewController" bundle:nil];
+    CJLocaViewController * locaVc = [storyBoardL instantiateInitialViewController];
+    
+    [self presentViewController:locaVc animated:YES completion:nil];
+    
+    
 }
 @end

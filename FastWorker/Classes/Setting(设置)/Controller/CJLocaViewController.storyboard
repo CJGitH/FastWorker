@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BZP-uy-dR3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="peO-Va-l5k">
+            <objects>
+                <navigationController id="BZP-uy-dR3" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J34-fE-Bzi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kQA-7P-sWI" kind="relationship" relationship="rootViewController" id="SrV-Ri-p2a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ikd-GA-A8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="339"/>
+        </scene>
+        <!--本地作品集-->
+        <scene sceneID="nvy-7V-cie">
+            <objects>
+                <viewController id="kQA-7P-sWI" customClass="CJLocaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R4x-0A-bc2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3bJ-Wi-bbB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rkw-1F-jNS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIP-7S-vdG">
+                                <rect key="frame" x="0.0" y="588" width="375" height="79"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFb-Zk-Hqi">
+                                        <rect key="frame" x="25" y="8" width="162" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="删除作品">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pm-5e-FwQ">
+                                        <rect key="frame" x="210" y="8" width="143" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="两张拼接">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="YFT-51-Kp1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3bJ-Wi-bbB" firstAttribute="top" secondItem="TIP-7S-vdG" secondAttribute="bottom" constant="-45" id="CFe-ZC-P1s"/>
+                            <constraint firstItem="TIP-7S-vdG" firstAttribute="leading" secondItem="Rkw-1F-jNS" secondAttribute="leading" id="dep-HP-nRE"/>
+                            <constraint firstAttribute="trailing" secondItem="TIP-7S-vdG" secondAttribute="trailing" id="mOB-lP-J9I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="本地作品集" id="glH-sj-DqR">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="g4W-nu-6J1">
+                            <connections>
+                                <action selector="backBtn:" destination="kQA-7P-sWI" id="oNd-pU-r74"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="选择" id="Ve9-G6-hem">
+                            <connections>
+                                <action selector="choseBtn:" destination="kQA-7P-sWI" id="p3n-be-b7I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bottomLine" destination="CFe-ZC-P1s" id="JLQ-qj-vWA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFJ-0U-Rzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.5" y="374.5"/>
+        </scene>
+    </scenes>
+</document>

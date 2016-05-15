@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0mR-ka-ttp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Code View Controller-->
+        <scene sceneID="NjH-sg-EOb">
+            <objects>
+                <viewController id="0mR-ka-ttp" customClass="CJCodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I3n-KA-8Ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Gv-wa-ufg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUp-Rl-wAC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-kZ-l14">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="F9s-k9-CfQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="r5U-0u-QQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2Uu-V2-dk6"/>
+                                    <constraint firstItem="r5U-0u-QQc" firstAttribute="leading" secondItem="SRl-kZ-l14" secondAttribute="leading" id="CgW-VY-MZk"/>
+                                    <constraint firstItem="r5U-0u-QQc" firstAttribute="width" secondItem="F9s-k9-CfQ" secondAttribute="width" id="QXE-72-A9o"/>
+                                    <constraint firstItem="r5U-0u-QQc" firstAttribute="height" secondItem="F9s-k9-CfQ" secondAttribute="height" id="SrQ-l3-dRC"/>
+                                    <constraint firstAttribute="bottom" secondItem="F9s-k9-CfQ" secondAttribute="bottom" id="axu-xV-vsf"/>
+                                    <constraint firstItem="F9s-k9-CfQ" firstAttribute="top" secondItem="SRl-kZ-l14" secondAttribute="top" id="bna-Uf-G1s"/>
+                                    <constraint firstAttribute="trailing" secondItem="F9s-k9-CfQ" secondAttribute="trailing" id="c0M-Wo-ldy"/>
+                                    <constraint firstAttribute="height" constant="200" id="clc-Ta-ROU"/>
+                                    <constraint firstAttribute="bottom" secondItem="r5U-0u-QQc" secondAttribute="bottom" id="d3e-Tu-zsA"/>
+                                    <constraint firstItem="F9s-k9-CfQ" firstAttribute="leading" secondItem="SRl-kZ-l14" secondAttribute="leading" id="ykO-qF-gT3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhJ-fo-DGn">
+                                <rect key="frame" x="25" y="35" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="giu-2m-JWD"/>
+                                </constraints>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="0mR-ka-ttp" eventType="touchUpInside" id="LXu-Jc-n8s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SRl-kZ-l14" firstAttribute="centerX" secondItem="bUp-Rl-wAC" secondAttribute="centerX" id="42P-Ba-7F5"/>
+                            <constraint firstItem="lhJ-fo-DGn" firstAttribute="leading" secondItem="bUp-Rl-wAC" secondAttribute="leading" constant="25" id="Ep6-ny-96S"/>
+                            <constraint firstItem="lhJ-fo-DGn" firstAttribute="top" secondItem="I3n-KA-8Ef" secondAttribute="bottom" constant="15" id="Mui-qb-f1f"/>
+                            <constraint firstItem="SRl-kZ-l14" firstAttribute="centerY" secondItem="bUp-Rl-wAC" secondAttribute="centerY" id="fc2-mz-i3H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scanBackView" destination="SRl-kZ-l14" id="nCA-mh-C0e"/>
+                        <outlet property="toBottom" destination="d3e-Tu-zsA" id="fle-sA-9tP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZp-qx-I8Q" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>

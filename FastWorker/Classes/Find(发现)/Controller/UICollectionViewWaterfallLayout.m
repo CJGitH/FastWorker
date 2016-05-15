@@ -73,6 +73,7 @@
 {
     [super prepareLayout];
 
+    
     _itemCount = [[self collectionView] numberOfItemsInSection:0];
     //整体宽度－左边界－右边界＝展示的宽度
     CGFloat width = self.collectionView.frame.size.width - _sectionInset.left - _sectionInset.right;
